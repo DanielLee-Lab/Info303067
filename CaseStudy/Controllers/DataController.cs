@@ -4,7 +4,6 @@ using System;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
-using System.Net.Http;
 
 namespace CaseStudy.Controllers
 {
@@ -17,19 +16,29 @@ namespace CaseStudy.Controllers
         {
             _ctx = context;
         }
-        private async Task<String> getMenuItemJsonFromWebAsync()
+        private async Task<String> getProductJsonFromWebAsync()
         {
-            string url = "https://gist.github.com/ddcb94b93f256228cd32fbe19a95712e.git";
+            string url = "https://raw.githubusercontent.com/DanielLee-Lab/Info303067/master/CaseStudy/CaseStudyJsonFile.json";
             var httpClient = new HttpClient();
             var response = await httpClient.GetAsync(url);
             var result = await response.Content.ReadAsStringAsync();
             return result;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<ActionResult<String>> Index()
         {
-            var json = await getMenuItemJsonFromWebAsync();
-            return Content(json);
+            DataUtility util = new DataUtility(_ctx);
+            string payload = "";
+            var json = await getProductJsonFromWebAsync();
+            try
+            {
+                payload = (await util.loadProductInfoFromWebToDb(json)) ? "tables loaded" : "problem loading tables";
+            }
+            catch (Exception ex)
+            {
+                payload = ex.Message;
+            }
+            return JsonSerializer.Serialize(payload);
         }
     }
 }

@@ -4,10 +4,10 @@
     "Brand": "Nike",
     "ProductName": "Nike Dunk 1",
     "GraphicName": "Dunk 1.png",
-    "CostPrice": 330,
-    "MSRP": 250,
-    "QtyOnHand": 10,
-    "QtyOnBackOrder": 10,
+    "CostPrice": "330",
+    "MSRP": "250",
+    "QtyOnHand": "10",
+    "QtyOnBackOrder": "10",
     "Description": "Nike Dunk 1 Shoes"
   },
   {
@@ -15,10 +15,10 @@
     "Brand": "Nike",
     "ProductName": "Nike Dunk 2",
     "GraphicName": "Dunk 2.png",
-    "CostPrice": 310,
-    "MSRP": 250,
-    "QtyOnHand": 10,
-    "QtyOnBackOrder": 10,
+    "CostPrice": "310",
+    "MSRP": "250",
+    "QtyOnHand": "10",
+    "QtyOnBackOrder": "10",
     "Description": "Nike Dunk 2 Shoes"
   },
   {
@@ -26,10 +26,10 @@
     "Brand": "Nike",
     "ProductName": "Nike Dunk 3",
     "GraphicName": "Dunk 3.png",
-    "CostPrice": 350,
-    "MSRP": 250,
-    "QtyOnHand": 10,
-    "QtyOnBackOrder": 10,
+    "CostPrice": "350",
+    "MSRP": "250",
+    "QtyOnHand": "10",
+    "QtyOnBackOrder": "10",
     "Description": "Nike Dunk 3 Shoes"
   },
   {
@@ -37,10 +37,10 @@
     "Brand": "Nike",
     "ProductName": "Nike Dunk 4",
     "GraphicName": "Dunk 4.png",
-    "CostPrice": 300,
-    "MSRP": 250,
-    "QtyOnHand": 10,
-    "QtyOnBackOrder": 10,
+    "CostPrice": "300",
+    "MSRP": "250",
+    "QtyOnHand": "10",
+    "QtyOnBackOrder": "10",
     "Description": "Nike Dunk 4 Shoes"
   },
   {
@@ -48,10 +48,10 @@
     "Brand": "Nike",
     "ProductName": "Nike Dunk 5",
     "GraphicName": "Dunk 5.png",
-    "CostPrice": 335,
-    "MSRP": 250,
-    "QtyOnHand": 10,
-    "QtyOnBackOrder": 10,
+    "CostPrice": "335",
+    "MSRP": "250",
+    "QtyOnHand": "10",
+    "QtyOnBackOrder": "10",
     "Description": "Nike Dunk 5 Shoes"
   },
   {
@@ -59,10 +59,10 @@
     "Brand": "New Balance",
     "ProductName": "New Balance 990",
     "GraphicName": "990.png",
-    "CostPrice": 250,
-    "MSRP": 150,
-    "QtyOnHand": 10,
-    "QtyOnBackOrder": 10,
+    "CostPrice": "250",
+    "MSRP": "150",
+    "QtyOnHand": "10",
+    "QtyOnBackOrder": "10",
     "Description": "New Balance 990 Series"
   },
   {
@@ -70,10 +70,10 @@
     "Brand": "New Balance",
     "ProductName": "New Balance 991",
     "GraphicName": "991.png",
-    "CostPrice": 275,
-    "MSRP": 150,
-    "QtyOnHand": 10,
-    "QtyOnBackOrder": 10,
+    "CostPrice": "275",
+    "MSRP": "150",
+    "QtyOnHand": "10",
+    "QtyOnBackOrder": "10",
     "Description": "New Balance 991 Series"
   },
   {
@@ -81,10 +81,10 @@
     "Brand": "New Balance",
     "ProductName": "New Balance 992",
     "GraphicName": "992.png",
-    "CostPrice": 280,
-    "MSRP": 150,
-    "QtyOnHand": 10,
-    "QtyOnBackOrder": 10,
+    "CostPrice": "280",
+    "MSRP": "150",
+    "QtyOnHand": "10",
+    "QtyOnBackOrder": "10",
     "Description": "New Balance 992 Series"
   },
   {
@@ -92,10 +92,10 @@
     "Brand": "New Balance",
     "ProductName": "New Balance 993",
     "GraphicName": "993.png",
-    "CostPrice": 225,
-    "MSRP": 150,
-    "QtyOnHand": 10,
-    "QtyOnBackOrder": 10,
+    "CostPrice": "225",
+    "MSRP": "150",
+    "QtyOnHand": "10",
+    "QtyOnBackOrder": "10",
     "Description": "New Balance 993 Series"
   },
   {
@@ -103,10 +103,10 @@
     "Brand": "New Balance",
     "ProductName": "New Balance 994",
     "GraphicName": "994.png",
-    "CostPrice": 300,
-    "MSRP": 150,
-    "QtyOnHand": 10,
-    "QtyOnBackOrder": 10,
+    "CostPrice": "300",
+    "MSRP": "150",
+    "QtyOnHand": "10",
+    "QtyOnBackOrder": "10",
     "Description": "New Balance 994 Series"
   },
   {
@@ -114,10 +114,10 @@
     "Brand": "Adidas",
     "ProductName": "Adidas SuperStar 1 Black",
     "GraphicName": "SuperStar1Black.png",
-    "CostPrice": 175,
-    "MSRP": 150,
-    "QtyOnHand": 10,
-    "QtyOnBackOrder": 10,
+    "CostPrice": "175",
+    "MSRP": "150",
+    "QtyOnHand": "10",
+    "QtyOnBackOrder": "10",
     "Description": "Adidas SuperStar 1 Black Colour"
   },
   {
@@ -125,10 +125,10 @@
     "Brand": "Adidas",
     "ProductName": "Adidas SuperStar 2 White",
     "GraphicName": "SuperStar2White.png",
-    "CostPrice": 205,
-    "MSRP": 150,
-    "QtyOnHand": 10,
-    "QtyOnBackOrder": 10,
+    "CostPrice": "205",
+    "MSRP": "150",
+    "QtyOnHand": "10",
+    "QtyOnBackOrder": "10",
     "Description": "Adidas SuperStar 2 White Colour"
   },
   {
@@ -136,10 +136,10 @@
     "Brand": "Adidas",
     "ProductName": "Adidas SuperStar 3 Yellow",
     "GraphicName": "SuperStar3Yellow.png",
-    "CostPrice": 200,
-    "MSRP": 150,
-    "QtyOnHand": 10,
-    "QtyOnBackOrder": 10,
+    "CostPrice": "200",
+    "MSRP": "150",
+    "QtyOnHand": "10",
+    "QtyOnBackOrder": "10",
     "Description": "Adidas SuperStar 3 Yellow Colour"
   },
   {
@@ -147,10 +147,10 @@
     "Brand": "Adidas",
     "ProductName": "Adidas SuperStar 4 Green",
     "GraphicName": "SuperStar4Green.png",
-    "CostPrice": 175,
-    "MSRP": 150,
-    "QtyOnHand": 10,
-    "QtyOnBackOrder": 10,
+    "CostPrice": "175",
+    "MSRP": "150",
+    "QtyOnHand": "10",
+    "QtyOnBackOrder": "10",
     "Description": "Adidas SuperStar 4 Green Colour"
   },
   {
@@ -158,10 +158,10 @@
     "Brand": "Adidas",
     "ProductName": "Adidas SuperStar 5 Red",
     "GraphicName": "SuperStar5Red.png",
-    "CostPrice": 155,
-    "MSRP": 150,
-    "QtyOnHand": 10,
-    "QtyOnBackOrder": 10,
+    "CostPrice": "155",
+    "MSRP": "150",
+    "QtyOnHand": "10",
+    "QtyOnBackOrder": "10",
     "Description": "Adidas SuperStar 5 Red Colour"
   }
 

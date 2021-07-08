@@ -77,10 +77,10 @@ namespace CaseStudy.DAL
                     pro.Id = element.GetProperty("Id").GetString();
                     pro.ProductName = element.GetProperty("ProductName").GetString();
                     pro.GraphicName = element.GetProperty("GraphicName").GetString();
-                    pro.CostPrice = Convert.ToDecimal(element.GetProperty("CostPrice"));
-                    pro.MSRP = Convert.ToDecimal(element.GetProperty("MSRP"));
-                    pro.QtyOnHand = Convert.ToInt32(element.GetProperty("QtyOnHand"));
-                    pro.QtyOnBackOrder = Convert.ToInt32(element.GetProperty("QtyOnHandOnBackOrder"));
+                    pro.CostPrice = Convert.ToDecimal(element.GetProperty("CostPrice").GetString());
+                    pro.MSRP = Convert.ToDecimal(element.GetProperty("MSRP").GetString());
+                    pro.QtyOnHand = Convert.ToInt32(element.GetProperty("QtyOnHand").GetString());
+                    pro.QtyOnBackOrder = Convert.ToInt32(element.GetProperty("QtyOnBackOrder").GetString());
                     pro.Description = element.GetProperty("Description").GetString();
                     string cat = element.GetProperty("Brand").GetString();
                     // add the FK here

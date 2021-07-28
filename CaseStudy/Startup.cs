@@ -13,7 +13,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using CaseStudy.DAL;
-
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 namespace CaseStudy
 {
@@ -42,6 +44,27 @@ namespace CaseStudy
 
             services.AddControllers();
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            // jwt addition
+            // get key from settings
+            var appSettings = Configuration.GetSection("AppSettings").GetValue<string>("Secret");
+            var key = Encoding.ASCII.GetBytes(appSettings);
+            // add scheme and options
+            services.AddAuthentication(scheme =>
+            {
+                scheme.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                scheme.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(option => {
+                option.RequireHttpsMetadata = false;
+                option.SaveToken = true;
+                option.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CaseStudy", Version = "v1" });
@@ -58,12 +81,13 @@ namespace CaseStudy
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CaseStudy v1"));
             }
 
+            app.UseDefaultFiles();
             app.UseHttpsRedirection();
-
+            app.UseStaticFiles();
             app.UseRouting();
-
-            app.UseAuthorization();
             app.UseCors(MyAllowSpecificOrigins);
+            app.UseAuthentication();
+            app.UseAuthorization();
 
 
             app.UseEndpoints(endpoints =>

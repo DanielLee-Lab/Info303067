@@ -17,7 +17,6 @@ namespace CaseStudy.DAL.DomainClasses
         //    descripition string
 
         [Key]
-        [StringLength(15)]
         public string Id { get; set; }
         public Brand Brand { get; set; }
         [Column(TypeName = "timestamp")]

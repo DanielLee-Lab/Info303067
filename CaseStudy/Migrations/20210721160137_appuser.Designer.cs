@@ -4,14 +4,16 @@ using CaseStudy.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CaseStudy.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210721160137_appuser")]
+    partial class appuser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -73,67 +75,11 @@ namespace CaseStudy.Migrations
                     b.ToTable("Customers");
                 });
 
-            modelBuilder.Entity("CaseStudy.DAL.DomainClasses.Order", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<decimal>("OrderAmount")
-                        .HasColumnType("money");
-
-                    b.Property<DateTime>("OrderDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("UserId")
-                        .HasMaxLength(128)
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Orders");
-                });
-
-            modelBuilder.Entity("CaseStudy.DAL.DomainClasses.OrderLineItem", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("OrderId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ProductId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("QtyBackOrdered")
-                        .HasColumnType("int");
-
-                    b.Property<int>("QtyOrdered")
-                        .HasMaxLength(15)
-                        .HasColumnType("int");
-
-                    b.Property<int>("QtySold")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("SellingPrice")
-                        .HasColumnType("money");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("OrderId");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("OrderLineItems");
-                });
-
             modelBuilder.Entity("CaseStudy.DAL.DomainClasses.Product", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<int?>("BrandId")
                         .HasColumnType("int");
@@ -172,23 +118,6 @@ namespace CaseStudy.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("CaseStudy.DAL.DomainClasses.OrderLineItem", b =>
-                {
-                    b.HasOne("CaseStudy.DAL.DomainClasses.Order", "Order")
-                        .WithMany("OrderLineItems")
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CaseStudy.DAL.DomainClasses.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId");
-
-                    b.Navigation("Order");
-
-                    b.Navigation("Product");
-                });
-
             modelBuilder.Entity("CaseStudy.DAL.DomainClasses.Product", b =>
                 {
                     b.HasOne("CaseStudy.DAL.DomainClasses.Brand", "Brand")
@@ -196,11 +125,6 @@ namespace CaseStudy.Migrations
                         .HasForeignKey("BrandId");
 
                     b.Navigation("Brand");
-                });
-
-            modelBuilder.Entity("CaseStudy.DAL.DomainClasses.Order", b =>
-                {
-                    b.Navigation("OrderLineItems");
                 });
 #pragma warning restore 612, 618
         }

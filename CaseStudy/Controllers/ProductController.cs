@@ -3,9 +3,11 @@ using System.Threading.Tasks;
 using CaseStudy.DAL;
 using CaseStudy.DAL.DAO;
 using CaseStudy.DAL.DomainClasses;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 namespace CaseStudy.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
